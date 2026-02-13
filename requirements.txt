@@ -2,3 +2,8 @@ semantic-kernel
 azure-identity
 python-dotenv
 requests
+
+streamlit
+pyyaml
+pandas
+matplotlib
