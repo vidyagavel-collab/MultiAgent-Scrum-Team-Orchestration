@@ -260,9 +260,7 @@ Single prompts can generate structured outputs — but multi-agent systems:
 
 ## 📄 License
 
-This project is created for academic and experimental purposes under UZH CAS Gen AI.
-
-(Add your license here if publishing publicly.)
+This project is created for academic and experimental purposes
 
 ---
 
@@ -270,13 +268,3 @@ This project is created for academic and experimental purposes under UZH CAS Gen
 
 Vidya
 ---
-
-If you'd like, I can also generate:
-
-* 🔬 A more academic research-style README
-* 🏢 A corporate enterprise-style README
-* 📊 A version including architecture diagrams (mermaid)
-* 📄 A polished GitHub-ready version with badges
-* 🧾 A project report summary for submission
-
-Just tell me the target audience.
