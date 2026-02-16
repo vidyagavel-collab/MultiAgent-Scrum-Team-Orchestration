@@ -20,6 +20,17 @@ def create_scrum_team_agents():
     ]
 
 
+# run_scrum_team.py (during debugging)
+def _debug_log(m):
+    print("DBG agent_response:", {
+        "name": getattr(m, "name", None),
+        "role": getattr(m, "role", None),
+        "type": type(m).__name__,
+        "has_content": bool(getattr(m, "content", None)),
+        "content_preview": (m.content[:80] + "…") if getattr(m, "content", None) else None
+    })
+
+
 # ------------------------------------
 # CORE function to run each agents
 # ------------------------------------
@@ -29,10 +40,11 @@ async def run_scrum_team(task: str, message_callback=None):
 
     orchestration = GroupChatOrchestration(
         members=agents,
-        manager=ScrumGroupChatManager(max_rounds=8),
+        manager=ScrumGroupChatManager(max_rounds=4),
         agent_response_callback=lambda m: (
             # messages.append({"name": m.name, "content": m.content}),
-            message_callback(m.name, m.content) if message_callback else None
+            _debug_log(m),
+            message_callback(m.name, m.content) if (message_callback and getattr(m, "content", None))else None
         ),
     )
 
