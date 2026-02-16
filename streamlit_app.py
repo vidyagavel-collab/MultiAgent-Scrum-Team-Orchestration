@@ -53,7 +53,7 @@ mode = st.sidebar.radio(
     ["Manual", "Single-Agent", "Multi-Agent"],
     index=2  # default = multi
 )
-
+print(f"Selected mode: {mode}")
 # -----------------------
 # Task Input
 # -----------------------
@@ -114,14 +114,17 @@ async def run_single_agent(task_description, on_message):
     """
     Single LLM call that performs all Scrum activities at once.
     """
+    
 
     from openai import AzureOpenAI
 
     client = AzureOpenAI(
         api_key=api_key,
-        azure_endpoint=endpoint
-    )
+        azure_endpoint=endpoint,        
+        api_version="2025-01-01-preview"
+        )
 
+    print(client._api_version)
     prompt = f"""
 You act as a complete Scrum team (Product Owner, Analyst, Developer, QA).
 
