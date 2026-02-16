@@ -1,9 +1,3 @@
-Here is a professional **README.md** tailored to your project structure and the provided `requirements.txt`  and `streamlit_app.py` .
-
-You can copy this directly into a `README.md` file in your root folder.
-
----
-
 # 🤖 MultiAgent Scrum Team Orchestration
 
 AI-powered Agile Scrum Team Simulator built with **Azure OpenAI**, **Semantic Kernel**, and **Streamlit**.
