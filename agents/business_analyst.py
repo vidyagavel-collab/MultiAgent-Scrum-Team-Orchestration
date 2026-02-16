@@ -13,7 +13,7 @@ deployment_name = os.getenv("MODEL_NAME")
 def create_business_analyst_agent():
     return ChatCompletionAgent(
         name="BusinessAnalyst",
-        description="Breaks the SRS into detailed user stories with acceptance criteria in Given/When/Then format.",
+        description="Breaks the backlog item into detailed user stories with acceptance criteria in Given/When/Then format.",
         instructions=("""
             SYSTEM:You are a Senior Business Analyst in an agile Scrum team. 
             Your role is to take backlog item created by product owner and break it down into precise, testable and unambigious Agile user stories that are ready for development.
